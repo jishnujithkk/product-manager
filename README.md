@@ -1,61 +1,93 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+#Laravel React Product Manager
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+##This is a project that combines the Laravel framework for the backend and React with Vite for the frontend. It serves as a product manager application.
+Requirements
 
-## About Laravel
+    Laravel Framework 8.83.27
+    PHP (compatible version with Laravel 8.83.27)
+    Node.js and npm (for React with Vite)
+    MySQL (or any other supported database)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+###Project Setup
+###Laravel Setup
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+    Clone the repository:
+    git clone https://github.com/jishnujithkk/Laravel-react-productmanager.git
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Navigate to the Laravel project directory:
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+cd Laravel-react-productmanager
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Install Composer dependencies:
 
-## Laravel Sponsors
+composer install
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Create a copy of the .env.example file and rename it to .env:
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+cp .env.example .env
 
-## Contributing
+Update the .env file with your database configuration and other settings.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Generate the application key:
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+php artisan key:generate
 
-## Security Vulnerabilities
+Run migrations and seed the database:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    php artisan migrate --seed
+
+React with Vite Setup
+
+    Navigate to the React project directory:
+
+
+
+cd react-product-manager
+
+Install Node.js dependencies:
+
+
+
+npm install
+
+Create a copy of the .env.example file and rename it to .env:
+
+
+
+cp .env.example .env
+
+Update the .env file with the necessary configurations.
+
+Run the development server:
+
+
+    npm run dev
+
+Database
+
+The SQL file laravel_react.sql is provided in the project folder. You can import it into your MySQL database to set up the initial schema and data.
+Running the Project
+
+    Start the Laravel development server:
+
+
+php artisan serve
+
+This will start the Laravel server at http://localhost:8000.
+
+In a separate terminal, start the React development server:
+
+
+    cd react-product-manager
+    npm run dev
+
+    This will start the React server at http://localhost:3000.
+
+    Open your browser and visit http://localhost:3000 to access the React frontend.
+
+That's it! You've successfully set up and run the Laravel React Product Manager project. If you encounter any issues, please review the steps and ensure that all dependencies are installed correctly.
